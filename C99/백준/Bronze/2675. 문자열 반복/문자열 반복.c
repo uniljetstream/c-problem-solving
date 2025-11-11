@@ -1,23 +1,25 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
     int t, r;
-    char str[21];
+    char s[21];
     
-    scanf("%d", &t);
+    scanf("%4d", &t);
+    
     for(int i=0;i<t;i++)
     {
-        scanf("%d %s", &r, str);
-        for(int j=0;j<strlen(str);j++)
+        scanf("%d %s", &r, s);
+        
+        char* ps = s;
+        while(*ps)
         {
-            for(int k=0;k<r;k++)
+            for(int i=0;i<r;i++)
             {
-                printf("%c", str[j]);
+                printf("%c", *ps);
             }
+            ps++;
         }
         printf("\n");
     }
-    return 0;
 }
